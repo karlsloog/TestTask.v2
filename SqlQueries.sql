@@ -23,22 +23,22 @@ CREATE TABLE insurance (
 );
 
 -- Adding 5 patients record into patient table
-INSERT INTO patient (pn, first, last, dob)
-VALUES ('00000000001', 'Christine', 'Haas', str_to_date ('01-02-1965','%m-%d-%Y')), 
-('00000000002', 'Michael', 'Thompson', str_to_date ('10-11-1973','%m-%d-%Y')), 
-('00000000003', 'Sally', 'Kwan', str_to_date ('04-05-1975','%m-%d-%Y')), 
-('00000000004', 'John', 'Geyer', str_to_date ('08-17-1949','%m-%d-%Y')), 
-('00000000005', 'Irving', 'Stern', str_to_date ('09-14-1973','%m-%d-%Y'));
+INSERT INTO patient (pn, first, last, dob) VALUES 
+('000000001', 'Christine', 'Haas', '1965-01-02'), 
+('000000002', 'Michael', 'Thompson', '1973-10-11'), 
+('000000003', 'Sally', 'Kwan', '1975-04-05'), 
+('000000004', 'John', 'Geyer', '1949-08-17'), 
+('000000005', 'Irving', 'Stern', '1973-09-14');
 
 -- Adding 2 insurance records for each patient
-INSERT INTO insurance (patient_id, iname, from_date, to_date)
-VALUES (1, 'Medicare', str_to_date ('02-03-1961','%m-%d-%Y'), str_to_date ('02-03-1962','%m-%d-%Y')),
-(1, 'Blue Cross', str_to_date ('02-03-1962','%m-%d-%Y'), str_to_date ('02-03-1963','%m-%d-%Y')),
-(2, 'Mediafare', str_to_date ('10-11-1973','%m-%d-%Y'), str_to_date ('10-11-1974','%m-%d-%Y')),
-(2, 'Blue fross', str_to_date ('10-11-1974','%m-%d-%Y'), str_to_date ('10-11-1975','%m-%d-%Y')),
-(3, 'Mediamare', str_to_date ('04-05-1975','%m-%d-%Y'), str_to_date ('04-05-1976','%m-%d-%Y')),
-(3, 'Blue gloss', str_to_date ('04-05-1976','%m-%d-%Y'), str_to_date ('04-05-1977','%m-%d-%Y')),
-(4, 'MediaMedia', str_to_date ('08-17-1949','%m-%d-%Y'), str_to_date ('08-17-1950','%m-%d-%Y')),
-(4, 'red Cross', str_to_date ('08-17-1950','%m-%d-%Y'), str_to_date ('08-17-1951','%m-%d-%Y')),
-(5, 'CareMedia', str_to_date ('09-14-1973','%m-%d-%Y'), str_to_date ('09-14-1974','%m-%d-%Y')),
-(5, 'Cross Blue', str_to_date ('09-14-1974','%m-%d-%Y'), str_to_date ('09-14-1975','%m-%d-%Y'));
+INSERT INTO insurance (patient_id, iname, from_date, to_date) VALUES 
+(1, 'Medicare', '1961-02-03', '1962-02-03'),
+(1, 'Blue Cross', '1962-02-03', '1963-02-03'),
+(2, 'Mediafare', '1973-10-11', '1974-10-11'),
+(2, 'Blue fross', '1974-10-11', '1975-10-11'),
+(3, 'Mediamare', '1975-04-05', '1976-04-05'),
+(3, 'Blue gloss', '1976-04-05', '1977-04-05'),
+(4, 'MediaMedia', '1949-08-17-', '1950-08-17'),
+(4, 'red Cross', '1950-08-17', '1951-08-17'),
+(5, 'CareMedia', '1973-09-14', '1974-09-14'),
+(5, 'Cross Blue', '1974-09-14', '1975-09-14');
