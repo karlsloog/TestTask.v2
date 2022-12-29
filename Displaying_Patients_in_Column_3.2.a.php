@@ -14,10 +14,19 @@
             WHERE 	p._id = i.patient_id
             ORDER BY i.from_date, p.last;";
 
-# Running while loop and fetching data from database
+# Fetching each row as an assoc. array
     $result=mysqli_query($connect,$query);
     while($row=mysqli_fetch_assoc($result))
 {
-    echo $row['pn'], ", ", $row['last'], ", ", $row['first'], ", ", $row['iname'], ", ", $row['fromdate'], ", ", $row['todate'], "\n";
+    # Extract values from the array
+    $pn = $row['pn'];
+    $last = $row['last'];
+    $first = $row['first'];
+    $iname = $row['iname'];
+    $from_date = $row['fromdate'];
+    $to_date = $row['todate'];
+
+    # Print the values to the console
+    echo "$pn, $last, $first, $iname, $from_date, $to_date\n";
 }
     ?> 
